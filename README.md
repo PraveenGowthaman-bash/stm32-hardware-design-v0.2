@@ -5,7 +5,7 @@ Complete STM32F4 PCB design with full manufacturing package - My first MCU board
 My first complete STM32 microcontroller board design from scratch. This project represents my journey from following tutorials to independent hardware design.
 
 **Key Features:**
-- STM32F407VGT6 microcontroller (ARM Cortex-M4, 168MHz)
+- STM32F103F6CT8 microcontroller (ARM Cortex-M4, 168MHz)
 - USB 2.0 Full Speed interface
 - UART, I2C, SPI breakout headers
 - Proper power supply filtering (digital/analog separation)
@@ -23,7 +23,7 @@ My first complete STM32 microcontroller board design from scratch. This project 
 ## 🛠️ Design Decisions & Lessons Learned
 
 ### Power Supply Design
-- Used AP2112K LDO for clean 3.3V rail
+- Used AMS1117-3.3v LDO for clean 3.3V rail
 - Separate VDDA supply with ferrite bead isolation
 - Proper decoupling: 10µF bulk + 100nF per pin + 10nF high-frequency
 
@@ -45,19 +45,11 @@ My first complete STM32 microcontroller board design from scratch. This project 
 2. Use standard 1.6mm FR-4, HASL finish
 3. Minimum clearance: 0.15mm (6mil)
 
-### Assembly
-1. Use `manufacturing/bom/stm32_v0.2_bom.csv` for components
-2. Use `manufacturing/pick-and-place/stm32_v0.2_pos.csv` for assembly
-3. Recommended: Start with just MCU, crystals, and power section
-
 ## 📈 Version History
 - **v0.1** - Initial design, DRC clearance issues with 0402 components
 - **v0.2** - Fixed DRC issues with 0603 components, improved layout, complete manufacturing package
 
-
 ## 📚 Resources & References
-- [STM32F407 Datasheet](datasheets/STM32F407VGT6.pdf)
-- [KiCad Documentation](https://docs.kicad.org)
 - [Phil's Lab Tutorials](https://www.youtube.com/c/PhilsLab)
 
 ## 👨‍💻 About the Designer
